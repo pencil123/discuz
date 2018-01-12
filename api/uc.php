@@ -279,7 +279,7 @@ class uc_note {
 
 		$UC_API = '';
 		if($post['UC_API']) {
-			$UC_API = str_replace(array('\'', '"', '\\', "\0", "\n", "\r"), '', $post['UC_API']);
+			$UC_API = str_replace(array('\'', '"', '\\', "\0", "\n", "\r"), '', addslashes($post['UC_API']));
 			unset($post['UC_API']);
 		}
 
